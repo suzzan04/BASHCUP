@@ -1,0 +1,132 @@
+/* this is the root color  */
+:root {
+    --color-primary: #68736A;
+    --color-dark: #010D00;
+    --color-muted: #9ba698d4;
+   --color-secondary: #511305;
+    --color-light: #d8d8d8c8;
+}
+
+/* whole site */
+body{
+    background-color:var(--color-light) ;
+}
+
+
+img{
+    width: 100%;
+}
+
+nav{
+    background-color: var(--color-primary);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.title{
+    color: var(--color-secondary);
+}
+
+/* nav bar */
+
+
+.navbar-brand{
+    margin-left: 50px;
+}
+
+
+.nav-item a{
+    color: #ffffff;
+    
+}
+
+
+.nav-item a:hover{
+    color: var(--color-dark);
+    font-style: line;
+}
+
+
+.navbar-nav {
+    font-size: 18px;
+}
+
+
+.nav-item {
+    padding-left: 20px; /* Add some padding to the button for better alignment */
+}
+
+
+
+.navbar .btn {
+    color: white;
+    background-color: var(--color-secondary); /* Button color */
+   margin-right: 20px;
+    border-color: var(--color-dark);
+    
+    transition: background-color 0.3s ease;
+}
+
+.navbar .btn:hover {
+    background-color: var(--color-muted); /* Button hover effect */}
+
+
+
+/* home */
+.mainsection{
+    margin-left: 30px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-right: 30px;
+    height: 80vh;
+    background-image: url('/static/app/image/4.jpg');
+    object-fit: contain; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    object-position: center;
+    
+}
+.home{
+    height: 80vh;
+}
+
+
+.home .btn{
+    color: white;
+    background-color: var(--color-secondary);
+    border-color: var(--color-dark);
+}
+
+
+.home .btn:hover{
+background-color: var(--color-muted);
+}
+
+  
+
+  /* Card Styling */
+.card {
+    border: none;
+    background-color: var(--color-light);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+ 
+.categories .btn:hover{
+    background-color: var(--color-dark);
+}
+
+
+.carousel-item img {
+    height: 70vh;
+} 
+
+
+
+  /* footer */
+footer{
+    background-color: var(--color-primary);
+  }
+  
+

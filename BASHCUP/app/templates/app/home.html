@@ -1,0 +1,58 @@
+{% extends "app/menu.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'app/css/home.css' %}">
+{% endblock head %}
+
+
+{% block main-content %}
+<!-- coffee section -->
+<section class="hero-section">
+    <div class="section-content">
+        <div class="hero-details">
+            <h2 class="hero-title">Best Coffee</h2>
+            <h3 class="subtitle">Make your great with our special coffee!</h3>
+<p class="description">Welcome to our coffee paradise, where every bean tells a stoey and every cup sparks joy.</p>
+
+<div class="buttons">
+    <a href="menu"><button class="btn  my-2 my-sm-0" type="button">Explore Now</button> </a>  
+ 
+  </div>
+    </div>
+    <div class="hero-image-wrapper">
+        <img src="{% static 'app/image/7.png' %}" alt="" class="hero-image">
+    </div>
+    </div>
+</section>
+
+<div class="handicratf-title">
+    <h1>Handi Craft</h1>
+</div>
+
+<!-- handicraft section -->
+<section class="hero-section">
+    <div class="section-content">
+        <div class="hero-image-wrapper">
+            <img src="{% static 'app/image/8.png' %}" alt="" class="hero-image">
+        </div>
+
+        <div class="hero-details">
+            <h2 class="hero-title">Handi Craft</h2>
+            <h3 class="subtitle">Make your great with our special coffee!</h3>
+<p class="description">Welcome to our coffee paradise, where every bean tells a stoey and every cup sparks joy.</p>
+
+<div class="buttons">
+    <a href="menu"><button class="btn  my-2 my-sm-0" type="button">Explore Now</button> </a>  
+ 
+  </div>
+    </div>
+    
+    </div>
+</section>
+
+
+{% endblock main-content %}
+
+
+
