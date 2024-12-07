@@ -1,6 +1,46 @@
 {% extends "app/menu.html" %}
+{% load static %}
 
 
-{% block main-containt %}
-<h3>handi</h3>
-{% endblock main-containt %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'app/css/handi.css' %}">
+{% endblock head %}
+
+
+
+{% block landing_section %}
+            
+          
+       
+<section 
+class="home text-light text-center d-flex flex-column justify-content-center align-items-center py-5"
+
+>
+<h2 class="display-4 fw-bold">Hand Made Product</h2>
+<p class="lead">Enjoy the best product in town</p>
+<button class="btn  btn-lg mt-3">Shop Now</button>
+</section>
+{% endblock landing_section %}
+
+{% block displayproduct %}
+      <section class="categories container py-5">
+        <h3 class="text-center">Handi Product</h3>
+        <p class="text-center text-muted">Explore the most beautyfull product</p>
+        <div class="row g-4">
+       
+          <div class="col-md-4">
+            <div class="card">
+              <img src="{{product.image.url}}" class="card-img-top" alt="{{product.title}}">
+              <div class="card-body text-center">
+                <h5>{{product.title}}</h5>
+                <h6>Price: Rs.{{product.price}} </h2>
+                <button class="btn btn-outline-dark">Pay Now</button>
+              </div>
+            </div>
+          </div>
+          
+     
+        </div>
+      </section>
+      {% endblock displayproduct %}
+     

@@ -70,6 +70,8 @@
         <div class="mainsection">
 
     
+          {% block landing_section %}
+            
           
        
         <section 
@@ -80,77 +82,34 @@
         <p class="lead">Enjoy the best coffee in town</p>
         <button class="btn  btn-lg mt-3">Shop Now</button>
       </section>
+      {% endblock landing_section %}
     </div>
 
     <!-- Categories Section -->
      <div class="items">
-
-     
-    <section class="categories container py-5">
+      {% block displayproduct %}
+      <section class="categories container py-5">
         <h3 class="text-center">Top Categories</h3>
         <p class="text-center text-muted">Explore the most bought drinks this week</p>
         <div class="row g-4">
-       
+       {% for product in products%}
           <div class="col-md-4">
             <div class="card">
-              <img src="{% static 'app/image/3.jpg' %}" class="card-img-top" alt="Espresso">
+              <img src="{{product.image.url}}" class="card-img-top" alt="{{product.title}}">
               <div class="card-body text-center">
-                <h5>Espresso Americano</h5>
+                <h5>{{product.title}}</h5>
+                <h6>Price: Rs.{{product.price}} </h2>
                 <button class="btn btn-outline-dark">Pay Now</button>
               </div>
             </div>
           </div>
           
-          <div class="col-md-4">
-            <div class="card">
-              <img src="{% static 'app/image/3.jpg' %}" class="card-img-top" alt="Espresso">
-              <div class="card-body text-center">
-                <h5>Espresso Americano</h5>
-                <button class="btn btn-outline-dark">Pay Now</button>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-md-4">
-            <div class="card">
-              <img src="{% static 'app/image/3.jpg' %}" class="card-img-top" alt="Espresso">
-              <div class="card-body text-center">
-                <h5>Espresso Americano</h5>
-                <button class="btn btn-outline-dark">Pay Now</button>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-md-4">
-            <div class="card">
-              <img src="{% static 'app/image/3.jpg' %}" class="card-img-top" alt="Espresso">
-              <div class="card-body text-center">
-                <h5>Espresso Americano</h5>
-                <button class="btn btn-outline-dark">Pay Now</button>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-md-4">
-            <div class="card">
-              <img src="{% static 'app/image/3.jpg' %}" class="card-img-top" alt="Espresso">
-              <div class="card-body text-center">
-                <h5>Espresso Americano</h5>
-                <button class="btn btn-outline-dark">Pay Now</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img src="{% static 'app/image/3.jpg' %}" class="card-img-top" alt="Cappuccino">
-              <div class="card-body text-center">
-                <h5>Cappuccino</h5>
-                <button class="btn btn-outline-dark">Pay Now</button>
-              </div>
-            </div>
-          </div>
+         {%endfor%}
         </div>
       </section>
+      {% endblock displayproduct %}
+     
+    
     </div>
 
 
@@ -198,7 +157,7 @@
 
 
 
-{% block blockname %}
+{% block footer %}
     <!-- Footer -->
   <footer class="text-white py-4">
     <div class="container">
@@ -239,7 +198,7 @@
     </div>
   </footer>
 
-{% endblock blockname %}
+{% endblock footer %}
 
 
 

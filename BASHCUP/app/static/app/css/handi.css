@@ -1,0 +1,8 @@
+/* parent css import */
+@import url('style.css'); 
+
+.mainsection{
+  
+    background-image: url('/static/app/image/1.png');
+ 
+}
