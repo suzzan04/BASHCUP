@@ -98,8 +98,9 @@
               <img src="{{product.image.url}}" class="card-img-top" alt="{{product.title}}">
               <div class="card-body text-center">
                 <h5>{{product.title}}</h5>
+                <p>{{product.description}}</p>
                 <h6>Price: Rs.{{product.price}} </h2>
-                <button class="btn btn-outline-dark">Pay Now</button>
+                <a href=" https://wa.me/+9779841643468?text=Order Placed for%20{{product.title}}%20{{product.description}}%20Price: Rs.{{product.price}}" target="_blank"><button class="btn btn-outline-dark">Pay Now</button></a>
               </div>
             </div>
           </div>
@@ -115,11 +116,8 @@
 
 
          <!-- special item Section -->
-
          <div class="special-item">
-          <section class="categories container py-5"
-          
-          >
+          <section class="categories container py-5">
             <h3 class="text-center">Special Item</h3>
             <p class="text-center text-muted">Our best items, Highly recommended</p>
         

@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
-from .models import products 
-
+from .models import products, handicraftProduct
 # Create your views here.
 
 def home(req):
@@ -10,13 +9,14 @@ def home(req):
 
 def menu(req):
     all_products = products.objects.all()  # Fetch all products
+    
     return render(req, "app/menu.html", {'products': all_products})  # Pass products to the template
 
 
 
 def handicraft(req):
-    all_products = products.objects.all()  # Fetch all products
-    return render(req, "app/handicraft.html", {'products': all_products})  # Pass products to the template
+    all_products = handicraftProduct.objects.all()  # Fetch all products
+    return render(req, "app/handicraft.html", {'handicraftProduct': all_products})  # Pass products to the template
 
 
 def feedback(req):
