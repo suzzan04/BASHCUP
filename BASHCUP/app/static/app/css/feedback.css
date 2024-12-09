@@ -1,0 +1,38 @@
+
+@import url('style.css'); 
+
+
+
+h1 {
+    color: var(--color-secondary);
+}
+
+.feedback-form {
+    background-color: var(--color-light);
+    border: 1px solid var(--color-muted);
+}
+
+label {
+    color: var(--color-dark);
+}
+
+input, textarea {
+    background-color: var(--color-back);
+    color: var(--color-dark);
+    border: 1px solid var(--color-muted);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 5px var(--color-primary);
+}
+
+.btn{
+    color: white;
+    background-color: var(--color-secondary);
+    border-color: var(--color-dark);
+}
+.btn:hover{
+    background-color: var(--color-muted);
+    }

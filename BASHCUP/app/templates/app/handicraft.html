@@ -35,7 +35,7 @@ class="home text-light text-center d-flex flex-column justify-content-center ali
                 <h5>{{product.title}}</h5>
                 <p>{{product.description}}</p>
                 <h6>Price: Rs.{{product.price}} </h2>
-                <button class="btn btn-outline-dark">Pay Now</button>
+                  <a href=" https://wa.me/+9779841643468?text=Order Placed for%20{{product.title}}%20{{product.description}}%20Price: Rs.{{product.price}}" target="_blank"><button class="btn btn-outline-dark">Pay Now</button></a>
               </div>
             </div>
           </div>
@@ -45,3 +45,48 @@ class="home text-light text-center d-flex flex-column justify-content-center ali
       </section>
       {% endblock displayproduct %}
      
+
+            <!-- special item Section -->
+            {% block special_item_banner %}
+            <div class="special-item">
+              <section class="categories container py-5">
+                <h3 class="text-center">Special Item</h3>
+                <p class="text-center text-muted">Our best items, Highly recommended</p>
+                
+                {% if specialHandi %}
+                <div id="carouselExampleIndicators" class="carousel slide">
+                  <div class="carousel-indicators">
+                    {% for banner in specialHandi %}
+                    <button 
+                      type="button" 
+                      data-bs-target="#carouselExampleIndicators" 
+                      data-bs-slide-to="{{ forloop.counter0 }}" 
+                      class="{% if forloop.first %}active{% endif %}" 
+                      aria-current="{% if forloop.first %}true{% endif %}" 
+                      aria-label="Slide {{ forloop.counter }}"></button>
+                    {% endfor %}
+                  </div>
+            
+                  <div class="carousel-inner">
+                    {% for banner in specialHandi %}
+                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                      <img src="{{ banner.image.url }}" class="d-block w-100 img-fluid custom-carousel-img" alt="Special Item {{ forloop.counter }}">
+                    </div>
+                    {% endfor %}
+                  </div>
+            
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                {% else %}
+                <p class="text-center text-muted">No special items available at the moment.</p>
+                {% endif %}
+              </section>
+            </div>
+            {% endblock special_item_banner %}

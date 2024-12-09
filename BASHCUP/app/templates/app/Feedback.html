@@ -1,8 +1,49 @@
 {% extends "app/menu.html" %}
 {% load static %}
 
+{% block head %}
+<link rel="stylesheet" href="{% static 'app/css/feedback.css' %}">
+{% endblock head %}
+
 {% block main-content %}
-  <h1>feedback</h1>
+<div class="container my-5">
+  <h1 class="text-center mb-4">Product Feedback Form</h1>
+  <form class="feedback-form p-4 rounded shadow-sm">
+      <div class="row g-3">
+          <div class="col-md-6">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+          </div>
+          <div class="col-md-6">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+          </div>
+          <div class="col-md-6">
+              <label for="phoneNumber" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter your phone number" required>
+          </div>
+          <div class="col-md-6">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="col-md-6">
+              <label for="productName" class="form-label">Product Name</label>
+              <input type="text" class="form-control" id="productName" placeholder="Enter the product name" required>
+          </div>
+          <div class="col-md-6">
+              <label for="purchaseDate" class="form-label">Date of Purchase</label>
+              <input type="date" class="form-control" id="purchaseDate" required>
+          </div>
+          <div class="col-12">
+              <label for="feedbackArea" class="form-label">Your Feedback</label>
+              <textarea class="form-control" id="feedbackArea" rows="5" placeholder="Write your feedback here..." required></textarea>
+          </div>
+          <div class="col-12 text-center">
+              <button type="submit" class="btn mt-3">Submit Feedback</button>
+          </div>
+      </div>
+  </form>
+</div>
 {% endblock %}
 
 
