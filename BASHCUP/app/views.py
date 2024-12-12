@@ -1,11 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render                                                                                                                       
 from django.shortcuts import HttpResponse
-from .models import products, handicraftProduct, specialCoffe, specialHandicraft    
+from .models import products, handicraftProduct, specialCoffe, specialHandicraft,landingBanners   
 # Create your views here.
 
-def home(req):
-    return render (req, "app/home.html")
 
+def home(req):
+    special_coffee_item = landingBanners.objects.all()
+    return render(req, "app/home.html", {'specialCoffee': special_coffee_item}) 
 
 def menu(req):
     all_products = products.objects.all()  # Fetch all products

@@ -7,6 +7,50 @@
 
 
 {% block main-content %}
+
+         <!-- special item Section -->
+         {% block special_item_banner %}
+         <div class="special-item">
+           <section class="categories container py-2 ">
+             
+             {% if specialCoffee %}
+             <div id="carouselExampleIndicators" class="carousel slide">
+               <div class="carousel-indicators">
+                 {% for banner in specialCoffee %}
+                 <button 
+                   type="button" 
+                   data-bs-target="#carouselExampleIndicators" 
+                   data-bs-slide-to="{{ forloop.counter0 }}" 
+                   class="{% if forloop.first %}active{% endif %}" 
+                   aria-current="{% if forloop.first %}true{% endif %}" 
+                   aria-label="Slide {{ forloop.counter }}"></button>
+                 {% endfor %}
+               </div>
+         
+               <div class="carousel-inner">
+                 {% for banner in specialCoffee %}
+                 <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                   <img src="{{ banner.image.url }}" class="d-block w-100 img-fluid custom-carousel-img" alt="Special Item {{ forloop.counter }}">
+                 </div>
+                 {% endfor %}
+               </div>
+         
+               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                 <span class="visually-hidden">Previous</span>
+               </button>
+               <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                 <span class="visually-hidden">Next</span>
+               </button>
+             </div>
+             {% else %}
+             <p class="text-center text-muted">No special items available at the moment.</p>
+             {% endif %}
+           </section>
+         </div>
+         {% endblock special_item_banner %}
+         
 <!-- coffee section -->
 <section class="hero-section">
     <div class="section-content">
@@ -21,7 +65,7 @@
   </div>
     </div>
     <div class="hero-image-wrapper">
-        <img src="{% static 'app/image/7.png' %}" alt="" class="hero-image">
+        <img src="{% static 'app/image/9.png' %}" alt="" class="hero-image">
     </div>
     </div>
 </section>

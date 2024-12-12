@@ -1,6 +1,14 @@
 /* parent css import */
 @import url('style.css'); 
 
+/* banner */
+
+.carousel-item img {
+    height: 80vh;
+    width: 100%;
+
+    
+} 
 
 /* styling to mainsection block */
 
